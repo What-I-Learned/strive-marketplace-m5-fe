@@ -1,0 +1,23 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+.nav-btn {
+  background-color: rgba(3, 3, 3, 0.705);
+  border: none;
+  border-radius: 2px;
+}
+.nav-btn:hover {
+  background-color: rgba(3, 3, 3, 0.979);
+}
+.nav-search {
+  border-radius: 2px;
+}
+.nav-search:focus {
+  border: none;
+  box-shadow: 0 0 0.1rem 0.1rem rgb(0 0 0 / 70%);
+}
