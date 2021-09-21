@@ -23,17 +23,14 @@ const AddProduct = (props) => {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(
-        process.env.REACT_APP_HOSTING + "/products",
-        {
-          method: "POST",
-          body: JSON.stringify(productDetails),
-          headers: {
-            "Content-type": "application/json",
-          },
-          // body: formData,
-        }
-      );
+      const response = await fetch(process.env.REACT_APP_HOSTING, {
+        method: "POST",
+        body: JSON.stringify(productDetails),
+        headers: {
+          "Content-type": "application/json",
+        },
+        // body: formData,
+      });
       if (response.ok) {
         let product = await response.json();
         let productId = product.newProduct.id;
@@ -41,7 +38,7 @@ const AddProduct = (props) => {
           const formData = new FormData();
           formData.append("image", file);
           const response = await fetch(
-            process.env.REACT_APP_HOSTING + `/products/${productId}/upload`,
+            process.env.REACT_APP_HOSTING + `/${productId}/upload`,
             {
               method: "POST",
               body: formData,
