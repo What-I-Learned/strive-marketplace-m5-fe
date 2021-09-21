@@ -1,7 +1,8 @@
 import "./productListing.css";
 import { Spinner, Row, Col } from "react-bootstrap";
 import ShopItem from "../ProductCard/ShopItem";
-
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const ProductListing = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -37,9 +38,6 @@ const ProductListing = () => {
     } else {
       return (
         <Row>
-          <p style={{ textAlign: "right", marginTop: 20 }}>
-            <AddVideo fetchVideos={fetchVideos} />
-          </p>
           {products.map((product, index) => (
             <Col key={index}>
               <Link to={`/products/${product._id}`}>
