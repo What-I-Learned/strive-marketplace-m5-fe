@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Container } from "react-bootstrap";
 import Navigation from "./components/Navigation/Navigation";
-import ProductListing from "./components/ProductListing/ProductListing";
+//import ProductListing from "./components/ProductListing/ProductListing";
 import AddProduct from "./components/AddNewProduct/AddProduct";
 
 function App() {
